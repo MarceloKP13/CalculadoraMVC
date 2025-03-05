@@ -1,18 +1,9 @@
-class CalculatorModel {
-    add(a, b) {
-      return a + b;
-    }
-    subtract(a, b) {
-      return a - b;
-    }
-    multiply(a, b) {
-      return a * b;
-    }
-    divide(a, b) {
-      if (b === 0) {
-        return 'Error'; // Prevención de división por 0
+const model = {
+  calculate: function(expression) {
+      try {
+          return eval(expression);  // Usamos eval para evaluar la expresión matemática.
+      } catch (error) {
+          return "Error";  // Si hay error, muestra "Error".
       }
-      return a / b;
-    }
   }
-  
+};
